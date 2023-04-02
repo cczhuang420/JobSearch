@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { View, ScrollView, SafeAreaView, Text } from "react-native";
 import { Stack, useRouter } from "expo-router";
-import Greeting from "../components/home/Greeting/Greeting.component";
+import Greeting from "../components/home/greeting/Greeting.component";
 import HeaderButton from "../components/common/HeaderButton.component";
 import { COLORS, icons } from "../constants";
+import Search from "../components/home/search/Search.component";
 
 const Home = () => {
   const router = useRouter();
@@ -11,7 +12,7 @@ const Home = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.primary },
+          headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
           headerLeft: () => <Greeting />,
           headerRight: () => (
@@ -20,7 +21,7 @@ const Home = () => {
           headerTitle: "",
         }}
       />
-
+      <Search />
       <ScrollView>
         <View></View>
       </ScrollView>

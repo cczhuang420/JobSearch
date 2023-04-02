@@ -6,14 +6,16 @@ const styles = StyleSheet.create({
     width: "40%",
   },
   greetingMessage: {
+    paddingLeft: SIZES.small,
+    paddingTop: SIZES.large,
     fontFamily: FONT.regular,
-    fontSize: SIZES.medium,
+    fontSize: SIZES.large,
     color: COLORS.gray,
   },
   userName: {
     fontFamily: FONT.bold,
     fontSize: SIZES.large,
-    color: COLORS.white,
+    color: COLORS.darkGray,
   },
 });
 

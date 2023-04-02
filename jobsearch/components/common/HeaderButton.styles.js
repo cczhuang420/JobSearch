@@ -3,9 +3,9 @@ import { COLORS, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: 30,
-    height: 30,
-    backgroundColor: COLORS.white,
+    width: 40,
+    height: 40,
+    backgroundColor: COLORS.lightWhite,
     borderRadius: SIZES.small * 5,
     justifyContent: "center",
     alignItems: "center",

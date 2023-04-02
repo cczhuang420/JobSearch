@@ -1,5 +1,5 @@
 import { Image, TouchableOpacity } from "react-native";
-import styles from "./HeaderButton.styles";
+import styles from "./headerButton.styles";
 
 const HeaderButton = ({ iconUri, dimension, handleOnPress }) => {
   return (
