@@ -9,7 +9,7 @@ const COLORS = {
   black: "#000000",
   purple: "#312651",
 
-  white: "#F3F4F8",
+  white: "#ffffff",
   lightWhite: "#FAFAFC",
 };
 

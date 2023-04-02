@@ -3,11 +3,11 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
   greetingContainer: {
-    width: "40%",
+    marginTop: SIZES.xLarge,
+    marginLeft: SIZES.xSmall,
+    width: "100%",
   },
   greetingMessage: {
-    paddingLeft: SIZES.small,
-    paddingTop: SIZES.large,
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
     color: COLORS.gray,

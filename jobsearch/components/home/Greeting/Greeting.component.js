@@ -4,7 +4,7 @@ import styles from "./greeting.styles";
 
 const Greeting = () => {
   return (
-    <View>
+    <View style={styles.greetingContainer}>
       <Text style={styles.greetingMessage}>Hello</Text>
       <Text style={styles.userName}></Text>
     </View>

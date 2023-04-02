@@ -2,9 +2,10 @@ import { useState } from "react";
 import { View, ScrollView, SafeAreaView, Text } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import Greeting from "../components/home/greeting/Greeting.component";
-import HeaderButton from "../components/common/HeaderButton.component";
+import HeaderButton from "../components/common/header/HeaderButton.component";
 import { COLORS, icons } from "../constants";
 import Search from "../components/home/search/Search.component";
+import PopularJobs from "../components/home/popularJobs/PopularJobs.component";
 
 const Home = () => {
   const router = useRouter();
@@ -23,7 +24,9 @@ const Home = () => {
       />
       <Search />
       <ScrollView>
-        <View></View>
+        <View>
+          <PopularJobs />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
