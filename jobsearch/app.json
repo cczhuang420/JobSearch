@@ -7,9 +7,9 @@
     "name": "jobsearch",
     "slug": "jobsearch",
     "splash":{
-      "image":"",
+      "image":"./assets/icons/splash.png",
       "resizeMode":"contain",
-      "backgroundColor":"ffffff"
+      "backgroundColor":"#ffffff"
     }
   }
 }
