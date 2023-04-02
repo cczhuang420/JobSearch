@@ -5,6 +5,11 @@
       "bundler": "metro"
     },
     "name": "jobsearch",
-    "slug": "jobsearch"
+    "slug": "jobsearch",
+    "splash":{
+      "image":"",
+      "resizeMode":"contain",
+      "backgroundColor":"ffffff"
+    }
   }
 }
