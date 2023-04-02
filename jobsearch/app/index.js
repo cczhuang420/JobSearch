@@ -1,10 +1,24 @@
-import { SafeAreaView, StyleSheet, View, Text } from "react-native";
-import React from "react";
-import { Link, Stack } from "expo-router";
+import {
+  TextInput,
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+} from "react-native";
+import React, { useState } from "react";
+import { Link, Stack, useRouter } from "expo-router";
+import styles from "./index.styles";
 import { COLORS, SIZES, FONT } from "../constants";
 
 // TODO - add login
 const Page = () => {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const handleLogin = () => {
+    router.push(`/${name}`);
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <Stack.Screen
@@ -14,46 +28,41 @@ const Page = () => {
           headerTitle: "",
         }}
       />
-      <View style={styles.container}>
-        <View style={styles.main}>
-          <Text style={styles.title}>Hello World</Text>
-          <Text style={styles.subtitle}>
-            This is the first page of your app.
-          </Text>
-          <Link style={styles.link} href="/home?name=CC">
-            Login
-          </Link>
+      <View style={styles.TextInputContainer}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Find A New Job</Text>
         </View>
+
+        <View style={styles.TextInputWrapper}>
+          <TextInput
+            style={styles.TextInput}
+            value={name}
+            onChangeText={(name) => {
+              setName(name);
+            }}
+            placeholder="Username"
+          ></TextInput>
+        </View>
+
+        <View style={styles.TextInputWrapper}>
+          <TextInput
+            style={styles.TextInput}
+            value={email}
+            onChangeText={(email) => {
+              setEmail(email);
+            }}
+            placeholder="Email"
+          ></TextInput>
+        </View>
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+          <Text style={styles.loginButtonText}>Sign In</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
 };
 
 export default Page;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
-  },
-  link: {
-    width: "50%",
-    fontSize: SIZES.xLarge,
-    backgroundColor: COLORS.secondary,
-  },
-});

@@ -20,17 +20,3 @@ const PopularJobsCard = ({ job }) => {
 };
 
 export default PopularJobsCard;
-
-// <TouchableOpacity>
-//   <TouchableOpacity>
-//     <Image source={""} resizeMode="contain" style={""} />
-//   </TouchableOpacity>
-//   <View>
-//     <Text style={styles.companyName} numberLines={1}>
-//       {job.employer_name}
-//     </Text>
-//     <Text style={styles.jobName} numberLines={1}>
-//       {job?.job_title}
-//     </Text>
-//   </View>
-// </TouchableOpacity>;

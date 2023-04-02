@@ -9,14 +9,14 @@ import PopularJobs from "../components/home/popularJobs/PopularJobs.component";
 
 const Home = () => {
   const router = useRouter();
-  const { name } = useSearchParams();
+  const { userhome } = useSearchParams();
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
-          headerLeft: () => <Greeting name={name} />,
+          headerLeft: () => <Greeting name={userhome} />,
           headerTitle: "",
         }}
       />

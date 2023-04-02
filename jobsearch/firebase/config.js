@@ -1,21 +1,23 @@
-// https://www.freecodecamp.org/news/react-native-firebase-tutorial/
-// TODO
-import * as firebase from "firebase";
-import "@firebase/auth";
-import "@firebase/firestore";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_KEY_HERE_AIzaSyAOWH",
-  authDomain: "your-auth-domain-b1234.firebaseapp.com",
-  databaseURL: "https://your-database-name.firebaseio.com",
-  projectId: "your-project-id-1234",
-  storageBucket: "your-project-id-1234.appspot.com",
-  messagingSenderId: "12345-insert-yourse",
-  appId: "insert yours: 1:1234:web:ee873bd1234c0deb7eba61ce",
+  apiKey: "AIzaSyAkCXCzRCql7wNi6BlvcTF0NGNPTXcoP08",
+  authDomain: "jobsearch-3cad8.firebaseapp.com",
+  projectId: "jobsearch-3cad8",
+  storageBucket: "jobsearch-3cad8.appspot.com",
+  messagingSenderId: "221383714548",
+  appId: "1:221383714548:web:a0a73dcec95ef910ec60a1",
+  measurementId: "G-H8VQ1PJZBH"
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-export { firebase };
+export default app;
