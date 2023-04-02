@@ -3,8 +3,8 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
   greetingContainer: {
+    flex: 1,
     marginTop: SIZES.xLarge,
-    marginLeft: SIZES.xSmall,
     width: "100%",
   },
   greetingMessage: {

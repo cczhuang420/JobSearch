@@ -1,44 +1,59 @@
-import { useState } from "react";
-import { View, ScrollView, SafeAreaView, Text } from "react-native";
-import { Stack, useRouter } from "expo-router";
-import Greeting from "../components/home/greeting/Greeting.component";
-import HeaderButton from "../components/common/header/HeaderButton.component";
-import { COLORS, icons } from "../constants";
-import Search from "../components/home/search/Search.component";
-import PopularJobs from "../components/home/popularJobs/PopularJobs.component";
+import { SafeAreaView, StyleSheet, View, Text } from "react-native";
+import React from "react";
+import { Link, Stack } from "expo-router";
+import { COLORS, SIZES, FONT } from "../constants";
 
-const Home = () => {
-  const router = useRouter();
+// TODO - add login
+const Page = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerStyle: { backgroundColor: COLORS.primary },
           headerShadowVisible: false,
-          headerLeft: () => <Greeting />,
-          headerRight: () => (
-            <HeaderButton iconUri={icons.signIn} dimension="80%" />
-          ),
           headerTitle: "",
         }}
       />
-      <Search />
-      <ScrollView>
-        <View>
-          <PopularJobs />
+      <View style={styles.container}>
+        <View style={styles.main}>
+          <Text style={styles.title}>Hello World</Text>
+          <Text style={styles.subtitle}>
+            This is the first page of your app.
+          </Text>
+          <Link style={styles.link} href="/home?name=CC">
+            Login
+          </Link>
         </View>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
 
-export default Home;
-// return (
-//   <Drawer.Navigator>
-//     {user ? (
-//       <Drawer.Screen name="Home" component={HomeScreen}></Drawer.Screen>
-//     ) : (
-//       <Drawer.Screen name="Login" component={LoginScreen}></Drawer.Screen>
-//     )}
-//   </Drawer.Navigator>
-// );
+export default Page;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    padding: 24,
+  },
+  main: {
+    flex: 1,
+    justifyContent: "center",
+    maxWidth: 960,
+    marginHorizontal: "auto",
+  },
+  title: {
+    fontSize: 64,
+    fontWeight: "bold",
+  },
+  subtitle: {
+    fontSize: 36,
+    color: "#38434D",
+  },
+  link: {
+    width: "50%",
+    fontSize: SIZES.xLarge,
+    backgroundColor: COLORS.secondary,
+  },
+});
