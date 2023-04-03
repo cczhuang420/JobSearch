@@ -2,6 +2,7 @@ import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+import { COLORS } from "../../constants";
 
 const _layout = () => {
   return (
@@ -25,6 +26,7 @@ const _layout = () => {
       <Tabs.Screen
         name="profile"
         options={{
+          tabBarActiveTintColor: COLORS.secondary,
           tabBarIcon: ({ color }) => (
             <MaterialIcons name="person-outline" size={30} color={color} />
           ),

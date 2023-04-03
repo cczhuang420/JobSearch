@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import { COLORS, SIZES, FONT, SHADOWS } from "../../../constants";
+import { COLORS, SIZES, FONT, SHADOWS } from "../../constants";
 
 const styles = StyleSheet.create({
-  popularJobsCard: {
+  jobsCard: {
     flex: 2,
     justifyContent: "flex-start",
     alignItems: "flex-start",
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     ...SHADOWS.medium,
     shadowColor: COLORS.lightWhite,
   },
-  popularJobsContainer: {
+  container: {
     flex: 2,
     justifyContent: "flex-start",
     alignItems: "flex-start",

@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
   greetingMessage: {
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
-    color: COLORS.gray,
+    color: COLORS.lightGray,
     marginRight: SIZES.xSmall,
   },
   userName: {
     fontFamily: FONT.bold,
     fontSize: SIZES.large,
-    color: COLORS.darkGray,
+    color: COLORS.white,
   },
 });
 
