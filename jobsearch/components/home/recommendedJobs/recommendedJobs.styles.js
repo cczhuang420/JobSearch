@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
   jobsHeaderTitle: {
     fontFamily: FONT.bold,
     fontSize: SIZES.medium,
-    color: COLORS.lightWhite,
+    color: COLORS.darkGray,
   },
   seeAllButton: {
     fontFamily: FONT.medium,
     fontSize: SIZES.medium,
-    color: COLORS.secondary,
+    color: COLORS.lightWhite,
   },
   cardsContainer: {
     marginTop: SIZES.medium,

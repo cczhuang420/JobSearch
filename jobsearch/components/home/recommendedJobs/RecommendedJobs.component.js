@@ -10,7 +10,7 @@ const RecommendedJobs = () => {
   const router = useRouter();
   const { data, loading, error } = useFetch("search", {
     query: "Software Engineer",
-    num_pages: "10",
+    num_pages: "2",
   });
   return (
     <View style={styles.container}>
