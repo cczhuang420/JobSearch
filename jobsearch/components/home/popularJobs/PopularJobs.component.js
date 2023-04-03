@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
-import PopularJobsCard from "../../common/cards/PopularJobsCard";
+import PopularJobsCard from "../../common/cards/JobsCard";
 
 import styles from "./popularJobs.styles";
 

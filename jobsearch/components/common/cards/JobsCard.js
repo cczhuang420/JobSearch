@@ -1,4 +1,4 @@
-import styles from "./popularJobsCard.styles";
+import styles from "./jobsCard.styles";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { icons } from "../../../constants";
 import { Feather } from "@expo/vector-icons";
@@ -27,18 +27,21 @@ const PopularJobsCard = ({ job, handlePress }) => {
           </View>
         </View>
 
-        <View style={styles.location}>
-          <Ionicons name="location-outline" size={16} color="black" />
-          <Text style={styles.locationText}>Auckland, NZ</Text>
-        </View>
-
         <View style={styles.jobTypeContainer}>
           <Text style={styles.jobType}> full time</Text>
           <Text style={styles.jobType}> Remote</Text>
         </View>
       </View>
+      <View style={styles.rightGroup}>
+        <TouchableOpacity>
+          <Feather name="star" size={24} color={COLORS.lightGray} />
+        </TouchableOpacity>
 
-      <Feather name="star" size={24} color={COLORS.lightGray} />
+        <View style={styles.location}>
+          <Ionicons name="location-outline" size={16} color="black" />
+          <Text style={styles.locationText}>Auckland, NZ</Text>
+        </View>
+      </View>
     </TouchableOpacity>
   );
 };

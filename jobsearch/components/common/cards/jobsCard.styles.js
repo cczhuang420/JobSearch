@@ -60,11 +60,17 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     flexDirection: "row",
     marginLeft: SIZES.small,
+    marginTop: SIZES.xLarge * 2,
   },
   locationText: {
     fontFamily: FONT.regular,
     fontSize: SIZES.small,
     marginLeft: SIZES.xSmall / 2,
+  },
+  rightGroup: {
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
   },
   jobTypeContainer: {
     justifyContent: "flex-start",
