@@ -18,6 +18,9 @@ const Search = ({ searchText, setSearchTex, handleChangeText }) => {
       <TextInput
         style={styles.searchInput}
         value={searchText}
+        onFocus={() => {
+          router.push("/screens/search");
+        }}
         onChangeText={(text) => {
           setSearchTex(text);
         }}

@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     ...SHADOWS.medium,
     shadowColor: COLORS.lightWhite,
+    marginRight: 20,
   },
   jobContainer: {
     justifyContent: "flex-start",
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     color: "#B3AEC6",
   },
   jobName: {
-    fontSize: SIZES.medium,
+    fontSize: SIZES.small + 1,
     fontFamily: FONT.bold,
     color: COLORS.darkGray,
   },
@@ -70,7 +71,9 @@ const styles = StyleSheet.create({
   rightGroup: {
     flexDirection: "column",
     justifyContent: "flex-end",
+    alignContent: "flex-end",
     alignItems: "flex-end",
+    marginLeft: 30,
   },
   jobTypeContainer: {
     justifyContent: "flex-start",
