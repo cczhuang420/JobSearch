@@ -2,21 +2,21 @@ import { StyleSheet } from "react-native";
 import { COLORS, SIZES, icons, FONT } from "../../../constants";
 
 const styles = StyleSheet.create({
-  popularJobsContainer: {
+  container: {
     marginTop: SIZES.medium,
     marginLeft: SIZES.small,
     marginRight: SIZES.small,
   },
-  popularJobsHeader: {
+  jobsHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: SIZES.small,
   },
-  popularJobsHeaderTitle: {
-    fontFamily: FONT.medium,
-    fontSize: SIZES.large,
-    color: COLORS.black,
+  jobsHeaderTitle: {
+    fontFamily: FONT.bold,
+    fontSize: SIZES.medium,
+    color: COLORS.lightWhite,
   },
   seeAllButton: {
     fontFamily: FONT.medium,

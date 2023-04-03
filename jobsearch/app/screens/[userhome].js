@@ -3,26 +3,26 @@ import { View, ScrollView, SafeAreaView, Text } from "react-native";
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { COLORS, icons } from "../../constants";
 import Search from "../../components/home/search/Search.component";
-import PopularJobs from "../../components/home/popularJobs/PopularJobs.component";
+import RecommendedJobs from "../../components/home/recommendedJobs/RecommendedJobs.component";
 import Greeting from "../../components/home/greeting/Greeting.component";
 
 const Home = () => {
   const router = useRouter();
   const { userhome } = useSearchParams();
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.secondary }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.primary },
+          headerStyle: { backgroundColor: COLORS.secondary },
           headerShadowVisible: false,
           headerLeft: () => <Greeting name={userhome} />,
           headerTitle: "",
         }}
       />
-      <Search />
       <ScrollView>
+        <Search />
         <View>
-          <PopularJobs />
+          <RecommendedJobs />
         </View>
       </ScrollView>
     </SafeAreaView>

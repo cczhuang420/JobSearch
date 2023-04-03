@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import { COLORS, SIZES, FONT, SHADOWS } from "../../../constants";
+import { COLORS, SIZES, FONT, SHADOWS } from "../../constants";
 
 const styles = StyleSheet.create({
-  popularJobsCard: {
+  jobsCard: {
     flex: 2,
     justifyContent: "flex-start",
     alignItems: "flex-start",
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     ...SHADOWS.medium,
     shadowColor: COLORS.lightWhite,
   },
-  popularJobsContainer: {
+  container: {
     flex: 2,
     justifyContent: "flex-start",
     alignItems: "flex-start",
@@ -60,11 +60,17 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     flexDirection: "row",
     marginLeft: SIZES.small,
+    marginTop: SIZES.xLarge * 2,
   },
   locationText: {
     fontFamily: FONT.regular,
     fontSize: SIZES.small,
     marginLeft: SIZES.xSmall / 2,
+  },
+  rightGroup: {
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
   },
   jobTypeContainer: {
     justifyContent: "flex-start",
