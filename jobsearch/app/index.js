@@ -1,25 +1,7 @@
-import { useState } from "react";
-import { View, ScrollView, SafeAreaView, Text } from "react-native";
-import { Stack, useRouter } from "expo-router";
+import { Redirect } from "expo-router";
 
-const Home = () => {
-  const router = useRouter();
-  return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#FAFAFC" }}>
-      <Stack.Screen
-        options={{
-          headerStyle: { backgroundColor: "#FF7754" },
-          headerShadowVisible: false,
-          headerLeft: () => <Text>left-header</Text>,
-          headerRight: () => <Text>right-header</Text>,
-          headerTitle: "CC-JOBSERACHER",
-        }}
-      />
-      <ScrollView>
-        <View></View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+const Index = () => {
+  return <Redirect href="/login" />;
 };
 
-export default Home;
+export default Index;
