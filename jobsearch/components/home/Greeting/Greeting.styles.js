@@ -4,13 +4,17 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 const styles = StyleSheet.create({
   greetingContainer: {
     flex: 1,
+    justifyContent: "space-between",
+    flexDirection: "row",
     marginTop: SIZES.xLarge,
-    width: "100%",
+    marginLeft: SIZES.medium,
+    height: "100%",
   },
   greetingMessage: {
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
     color: COLORS.gray,
+    marginRight: SIZES.xSmall,
   },
   userName: {
     fontFamily: FONT.bold,

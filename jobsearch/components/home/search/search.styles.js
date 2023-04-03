@@ -1,29 +1,24 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES, FONT } from "../../../constants";
 const styles = StyleSheet.create({
-  searchContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    marginTop: SIZES.large,
-    marginLeft: SIZES.small,
-    height: 50,
-  },
   searchWrapper: {
-    flex: 1,
-    backgroundColor: COLORS.white,
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: COLORS.white,
     borderRadius: SIZES.small,
     borderColor: COLORS.lightGray,
     borderWidth: 1,
-    height: "100%",
+    marginTop: SIZES.xLarge,
+    marginLeft: SIZES.small,
+    marginRight: SIZES.small,
+    height: 50,
   },
+
   searchInput: {
     fontFamily: FONT.regular,
     width: "100%",
     height: "100%",
-    paddingHorizontal: SIZES.medium,
   },
 
   searchButton: {
@@ -36,9 +31,10 @@ const styles = StyleSheet.create({
   },
 
   searchImage: {
-    width: "70%",
+    marginLeft: SIZES.xxLarge * 1.5,
+    width: "15%",
     height: "70%",
-    tintColor: COLORS.gray,
+    tintColor: COLORS.lightGray,
   },
 });
 export default styles;

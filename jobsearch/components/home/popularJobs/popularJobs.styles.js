@@ -3,7 +3,7 @@ import { COLORS, SIZES, icons, FONT } from "../../../constants";
 
 const styles = StyleSheet.create({
   popularJobsContainer: {
-    marginTop: SIZES.xLarge,
+    marginTop: SIZES.medium,
     marginLeft: SIZES.small,
     marginRight: SIZES.small,
   },

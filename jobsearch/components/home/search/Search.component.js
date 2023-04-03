@@ -3,30 +3,26 @@ import { useRouter } from "expo-router";
 
 import styles from "./search.styles";
 import { icons, SIZES } from "../../../constants";
+import { Ionicons } from "@expo/vector-icons";
 
 const Search = ({ searchText, setSearchTex, handleChangeText }) => {
   const router = useRouter();
 
   return (
-    <View style={styles.searchContainer}>
-      <View style={styles.searchWrapper}>
-        <TextInput
-          style={styles.searchInput}
-          value={searchText}
-          onChangeText={(text) => {
-            setSearchTex(text);
-          }}
-          placeholder="Search job or company"
-        />
-      </View>
-
-      <TouchableOpacity style={styles.searchButton}>
-        <Image
-          source={icons.searchWhite}
-          resizeMode="contain"
-          style={styles.searchImage}
-        />
-      </TouchableOpacity>
+    <View style={styles.searchWrapper}>
+      <Image
+        source={icons.searchWhite}
+        resizeMode="contain"
+        style={styles.searchImage}
+      />
+      <TextInput
+        style={styles.searchInput}
+        value={searchText}
+        onChangeText={(text) => {
+          setSearchTex(text);
+        }}
+        placeholder="Search job or company"
+      />
     </View>
   );
 };
