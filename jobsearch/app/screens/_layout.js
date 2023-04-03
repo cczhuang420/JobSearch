@@ -1,5 +1,7 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 
 const _layout = () => {
   return (
@@ -16,7 +18,7 @@ const _layout = () => {
         name="saved"
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons name="bookmark" size={24} color={color} />
+            <Feather name="star" size={24} color={color} />
           ),
         }}
       />
@@ -24,7 +26,7 @@ const _layout = () => {
         name="profile"
         options={{
           tabBarIcon: ({ color }) => (
-            <Ionicons name="person" size={24} color={color} />
+            <MaterialIcons name="person-outline" size={30} color={color} />
           ),
         }}
       />
