@@ -5,7 +5,7 @@ import styles from "./search.styles";
 import { icons, SIZES } from "../../../constants";
 import { Ionicons } from "@expo/vector-icons";
 
-const Search = ({ searchText, setSearchTex, handleChangeText }) => {
+const Search = () => {
   const router = useRouter();
 
   return (
@@ -17,12 +17,8 @@ const Search = ({ searchText, setSearchTex, handleChangeText }) => {
       />
       <TextInput
         style={styles.searchInput}
-        value={searchText}
         onFocus={() => {
           router.push("/screens/search");
-        }}
-        onChangeText={(text) => {
-          setSearchTex(text);
         }}
         placeholder="Search job or company"
       />
