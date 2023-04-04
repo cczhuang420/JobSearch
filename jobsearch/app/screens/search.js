@@ -56,13 +56,23 @@ const search = () => {
   };
 
   const handlePagination = (direction) => {
-    if (direction === "left" && page > 1) {
-      setPage(page - 1);
-      handleSearch();
-    } else if (direction === "right") {
-      setPage(page + 1);
-      handleSearch();
+    if (value) {
+      if (direction === "left" && page > 1) {
+        setPage(page - 1);
+        handleSearch();
+      } else if (direction === "right") {
+        setPage(page + 1);
+        handleSearch();
+      }
     }
+  };
+
+  const handleTextChange = (text) => {
+    setTitle("");
+    setSubTitle("");
+    setValue(text);
+    setPage(1);
+    setResult([]);
   };
 
   useEffect(() => {
@@ -106,7 +116,7 @@ const search = () => {
                 autoCorrect={true}
                 onSubmitEditing={handleSearch}
                 placeholder="search"
-                onChangeText={(text) => setValue(text)}
+                onChangeText={(text) => handleTextChange(text)}
               />
               <TouchableOpacity onPress={handleSearch}>
                 <Ionicons name="send" size={24} color={COLORS.secondary} />

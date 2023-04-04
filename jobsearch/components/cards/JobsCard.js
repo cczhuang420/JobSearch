@@ -35,7 +35,7 @@ const JobsCard = ({ job, handlePress }) => {
         <View style={styles.jobTypeContainer}>
           <Text style={styles.jobType}> {job.job_employment_type}</Text>
           {job.job_is_remote ? (
-            <Text style={styles.jobType}> Remote</Text>
+            <Text style={styles.jobType}> REMOTE</Text>
           ) : (
             <Text></Text>
           )}
