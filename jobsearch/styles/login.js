@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   titleContainer: { marginBottom: SIZES.xLarge },
   title: {
     fontFamily: FONT.bold,
-    fontSize: 30,
+    fontSize: 36,
     color: COLORS.secondary,
   },
   TextInputContainer: {
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
 
   buttonContainer: {
     flex: 1,
+    width: 300,
     marginTop: SIZES.small,
     marginLeft: SIZES.xxLarge,
     marginRight: SIZES.xxLarge,

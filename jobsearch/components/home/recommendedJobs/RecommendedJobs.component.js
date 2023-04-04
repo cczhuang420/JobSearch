@@ -31,7 +31,10 @@ const RecommendedJobs = () => {
             <JobsCard
               job={job}
               key={`job${job.job_id}`}
-              handlePress={() => router.push(`/job-details/${job.job_id}`)}
+              handlePress={() =>
+                router.push(`/job-details/${job.job_id}`)
+              }
+              handleSave={() => ""}
             />
           ))
         )}

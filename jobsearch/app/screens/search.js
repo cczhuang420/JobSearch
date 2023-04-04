@@ -35,7 +35,7 @@ const search = () => {
         page: page.toString(),
       },
       headers: {
-        "X-RapidAPI-Key": "574b098e77msh06b6add569c3466p1f4f79jsn9399e1a098d0",
+        "X-RapidAPI-Key": "eac84b28dbmsh036d9b0bdd675c1p1ddc67jsnf82c57d39faf",
         "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
       },
     };
@@ -84,6 +84,8 @@ const search = () => {
       <Stack.Screen
         options={{
           headerTitle: "",
+          headerStyle: { backgroundColor: COLORS.primary },
+          headerShadowVisible: false,
           header: () => (
             <View
               style={{
@@ -123,8 +125,6 @@ const search = () => {
               </TouchableOpacity>
             </View>
           ),
-          headerStyle: { backgroundColor: COLORS.primary },
-          headerShadowVisible: false,
         }}
       />
 

@@ -6,7 +6,7 @@ import { COLORS, icons } from "../../constants";
 import checkImgUrl from "../../utils";
 icons;
 
-const JobsCard = ({ job, handlePress }) => {
+const JobsCard = ({ job, handlePress, handleSave }) => {
   return (
     <TouchableOpacity style={styles.jobsCard} onPress={handlePress}>
       <View style={styles.container}>
@@ -42,8 +42,8 @@ const JobsCard = ({ job, handlePress }) => {
         </View>
       </View>
       <View style={styles.rightGroup}>
-        <TouchableOpacity>
-          <Feather name="star" size={24} color={COLORS.lightGray} />
+        <TouchableOpacity onPress={handleSave}>
+          <Feather name="heart" size={24} color={COLORS.lightGray} />
         </TouchableOpacity>
 
         <View style={styles.location}>

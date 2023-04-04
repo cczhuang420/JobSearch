@@ -30,7 +30,7 @@ const _layout = () => {
         name="saved"
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="star" size={20} color={color} />
+            <FontAwesome name="heart" size={20} color={color} />
           ),
         }}
       />

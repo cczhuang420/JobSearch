@@ -6,9 +6,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React, { useState } from "react";
-import { Link, Stack, useRouter } from "expo-router";
-import styles from "./index.styles";
-import { COLORS, SIZES, FONT } from "../constants";
+import { Stack, useRouter } from "expo-router";
+import styles from "../styles/login";
+import { COLORS } from "../constants";
 
 // TODO - add login
 const Login = () => {
@@ -54,12 +54,12 @@ const Login = () => {
             placeholder="Email"
           ></TextInput>
         </View>
-      </View>
 
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <Text style={styles.loginButtonText}>Sign In</Text>
-        </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+            <Text style={styles.loginButtonText}>Sign In</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );
