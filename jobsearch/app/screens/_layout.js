@@ -21,6 +21,9 @@ const _layout = () => {
           tabBarIcon: ({ color }) => (
             <FontAwesome name="search" size={20} color={color} />
           ),
+          tabBarStyle: {
+            display: "none",
+          },
         }}
       />
       <Tabs.Screen

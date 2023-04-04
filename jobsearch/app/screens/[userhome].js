@@ -22,7 +22,7 @@ const Home = () => {
       <ScrollView>
         <Search />
         <View>
-          <RecommendedJobs />
+         {/*<RecommendedJobs />*/} 
         </View>
       </ScrollView>
     </SafeAreaView>
