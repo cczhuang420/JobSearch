@@ -15,9 +15,14 @@ const Login = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+
   const handleLogin = () => {
     router.push(`/screens/${name}`);
   };
+
+  // const handleLogin = () => {
+  //   router.push("/jobInfo/jobInfo");
+  // };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     width: "60%",
     height: "100%",
-    borderRadius: SIZES.medium,
+    borderRadius: SIZES.xSmall,
   },
   applyButtonText: {
     fontSize: SIZES.medium,

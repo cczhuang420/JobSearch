@@ -5,11 +5,13 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 
 const JobBox = ({ logo, jobTitle, companyName, jobPostdate }) => {
-  const currentDate = new Date().getDate();
-  const jobdate = new Date(jobPostdate).getDate();
+  const currentDate = new Date().getTime();
+  const jobdate = new Date(jobPostdate).getTime();
   const daysDifference = Math.ceil(
     (currentDate - jobdate) / (1000 * 60 * 60 * 24)
   );
+
+  const postedAt = `Posted ${daysDifference} days ago`;
 
   return (
     <View style={styles.container}>
@@ -33,9 +35,7 @@ const JobBox = ({ logo, jobTitle, companyName, jobPostdate }) => {
       </View>
 
       <View>
-        <Text style={styles.daysDifferenceText}>
-          Posted {daysDifference} days ago
-        </Text>
+        <Text style={styles.daysDifferenceText}>{postedAt}</Text>
       </View>
     </View>
   );

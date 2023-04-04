@@ -1,62 +1,40 @@
-// import { StyleSheet } from "react-native";
-// import { COLORS, SIZES, FONT } from "../../../constants";
-
-// const styles = StyleSheet.create({
-//   container: {
-//     height: 800,
-//     backgroundColor: COLORS.secondary,
-//     marginVertical: SIZES.medium,
-//     backgroundColor: COLORS.lightWhite,
-//     borderRadius: SIZES.medium,
-//     padding: SIZES.medium,
-//   },
-//   subContainer: {
-//     flexDirection: "column",
-//     marginVertical: SIZES.small,
-//     justifyContent: "center",
-//     alignItems: "flex-start",
-//   },
-//   textBox: {
-//     marginTop: SIZES.small,
-//   },
-//   textHeader: {
-//     fontFamily: FONT.bold,
-//     fontSize: SIZES.small,
-//     color: COLORS.darkGray,
-//   },
-//   text: {
-//     fontFamily: FONT.regular,
-//     fontSize: SIZES.small,
-//     color: COLORS.darkGray,
-//   },
-// });
-
-// export default styles;
-
 import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES, icons } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: SIZES.large,
+    marginTop: SIZES.medium,
     backgroundColor: COLORS.lightWhite,
     borderRadius: SIZES.medium,
-    padding: SIZES.medium,
+    padding: SIZES.xSmall,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
-  title: {
-    fontSize: SIZES.large,
-    color: COLORS.darkGray,
+  subContainerLeft: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    paddingLeft: SIZES.medium,
+  },
+  subContainerRight: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    paddingRight: SIZES.medium,
+  },
+  textBox: {
+    marginVertical: SIZES.xSmall,
+  },
+  textHeader: {
     fontFamily: FONT.bold,
+    fontSize: SIZES.small,
+    color: COLORS.darkGray,
+    marginBottom: SIZES.xSmall - 2,
   },
-  textContainer: {
-    marginVertical: SIZES.small,
-  },
-  description: {
-    textAlign: "auto",
-    fontSize: SIZES.medium - 2,
-    color: COLORS.gray,
+  text: {
     fontFamily: FONT.regular,
-    marginVertical: SIZES.small / 1.25,
+    fontSize: SIZES.small,
+    color: COLORS.darkGray,
   },
 });
 

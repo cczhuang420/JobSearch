@@ -80,12 +80,17 @@ const JobDetails = () => {
                 jobPostdate={data[0].job_posted_at_datetime_utc}
               />
               <JobInfo
-                jobExpireDay={data[0].job_offer_expiration_datetime_utc}
+                jobExpireDay={
+                  data[0].job_offer_expiration_datetime_utc ??
+                  "No Expiration Date"
+                }
                 isRemote={data[0].job_is_remote}
                 jobType={data[0].job_employment_type}
                 jobLocation={data[0].job_country}
               />
-              <Description description={data[0].job_description} />
+              <Description
+                description={data[0].job_description ?? "No data provided"}
+              />
             </View>
           )}
         </ScrollView>

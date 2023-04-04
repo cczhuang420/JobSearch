@@ -3,7 +3,7 @@ import { COLORS, FONT, SIZES, icons } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: SIZES.large,
+    marginTop: SIZES.xSmall,
     backgroundColor: COLORS.lightWhite,
     borderRadius: SIZES.medium,
     padding: SIZES.medium,
