@@ -1,7 +1,6 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
 import { COLORS } from "../../constants";
 
 const _layout = () => {
@@ -10,6 +9,7 @@ const _layout = () => {
       <Tabs.Screen
         name="[userhome]"
         options={{
+          tabBarActiveTintColor: COLORS.secondary,
           tabBarIcon: ({ color }) => (
             <Ionicons name="home" size={20} color={color} />
           ),
@@ -18,6 +18,7 @@ const _layout = () => {
       <Tabs.Screen
         name="search"
         options={{
+          tabBarActiveTintColor: COLORS.secondary,
           tabBarIcon: ({ color }) => (
             <FontAwesome name="search" size={20} color={color} />
           ),
@@ -29,6 +30,7 @@ const _layout = () => {
       <Tabs.Screen
         name="saved"
         options={{
+          tabBarActiveTintColor: COLORS.secondary,
           tabBarIcon: ({ color }) => (
             <FontAwesome name="heart" size={20} color={color} />
           ),

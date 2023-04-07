@@ -42,10 +42,10 @@ const styles = StyleSheet.create({
   paginationTextBox: {
     width: 30,
     height: 30,
-    borderRadius: 2,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.lightWhite,
   },
   paginationText: {
     fontFamily: FONT.bold,

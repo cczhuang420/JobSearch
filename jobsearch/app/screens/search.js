@@ -84,17 +84,16 @@ const search = () => {
       <Stack.Screen
         options={{
           headerTitle: "",
-          headerStyle: { backgroundColor: COLORS.primary },
           headerShadowVisible: false,
           header: () => (
             <View
               style={{
-                marginTop: 30,
-                marginBottom: 5,
-                padding: 5,
+                paddingTop: 50,
+                paddingBottom: 20,
                 flexDirection: "row",
                 justifyContent: "space-around",
                 elevation: 5,
+                backgroundColor: COLORS.primary,
               }}
             >
               <TouchableOpacity
@@ -109,8 +108,9 @@ const search = () => {
                 style={{
                   width: "70%",
                   paddingHorizontal: 16,
-                  backgroundColor: COLORS.white,
+                  backgroundColor: COLORS.lightWhite,
                   borderRadius: 5,
+                  borderWidth: 0,
                   alignContent: "center",
                   fontFamily: FONT.regular,
                 }}

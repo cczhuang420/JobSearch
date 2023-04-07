@@ -1,10 +1,10 @@
 const COLORS = {
-  primary: "#F5F7FC",
-  secondary: "#2684FF",
+  primary: "#E2F4FF",
+  secondary: "#48C2F5",
   tertiary: "#40577D",
 
-  gray: "#595961",
-  lightGray:"#CCCED2",
+  gray: "#78828B",
+  lightGray: "#CCCED2",
   darkGray: "#181A1F",
 
   black: "#000000",
@@ -54,3 +54,6 @@ const SHADOWS = {
 };
 
 export { COLORS, FONT, SIZES, SHADOWS };
+
+// primary: "#F5F7FC",
+// secondary: "#2684FF",

@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   jobsHeaderTitle: {
     fontFamily: FONT.bold,
     fontSize: SIZES.medium,
-    color: COLORS.darkGray,
+    color: COLORS.lightWhite,
   },
   seeAllButton: {
     fontFamily: FONT.medium,
