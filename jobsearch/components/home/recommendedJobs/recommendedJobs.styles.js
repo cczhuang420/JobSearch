@@ -3,7 +3,7 @@ import { COLORS, SIZES, icons, FONT } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: SIZES.medium,
+    marginTop: SIZES.medium-2,
     marginLeft: SIZES.small,
     marginRight: SIZES.small,
   },
@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
   jobsHeaderTitle: {
     fontFamily: FONT.bold,
     fontSize: SIZES.medium,
-    color: COLORS.lightWhite,
+    color: COLORS.secondary,
   },
   seeAllButton: {
     fontFamily: FONT.medium,
     fontSize: SIZES.medium,
-    color: COLORS.lightWhite,
+    color: COLORS.gray,
   },
   cardsContainer: {
     marginTop: SIZES.medium,

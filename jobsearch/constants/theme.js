@@ -12,6 +12,8 @@ const COLORS = {
 
   white: "#ffffff",
   lightWhite: "#FAFAFC",
+
+  alert: "#F43838",
 };
 
 const FONT = {

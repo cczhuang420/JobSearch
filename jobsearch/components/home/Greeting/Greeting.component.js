@@ -1,4 +1,4 @@
-import { icons, SIZES } from "../../../constants";
+
 import { View, Text, FlatList } from "react-native";
 import styles from "./greeting.styles";
 

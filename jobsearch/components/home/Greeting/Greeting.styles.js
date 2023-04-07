@@ -6,20 +6,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
     flexDirection: "row",
-    marginTop: SIZES.xLarge,
+    marginTop: SIZES.small,
     marginLeft: SIZES.medium,
+    marginBottom:10,
     height: "100%",
   },
   greetingMessage: {
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
-    color: COLORS.lightGray,
+    color: COLORS.lightWhite,
     marginRight: SIZES.xSmall,
   },
   userName: {
     fontFamily: FONT.bold,
     fontSize: SIZES.large,
-    color: COLORS.white,
+    color: COLORS.white
   },
 });
 

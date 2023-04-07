@@ -4,23 +4,29 @@ import { COLORS } from "../../constants";
 import Search from "../../components/home/search/Search.component";
 import RecommendedJobs from "../../components/home/recommendedJobs/RecommendedJobs.component";
 import Greeting from "../../components/home/greeting/Greeting.component";
+import SettingsButton from "../../components/home/settings/button/SettingsButton.component";
 
 const Home = () => {
   const router = useRouter();
   const { userhome } = useSearchParams();
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: COLORS.secondary },
           headerShadowVisible: false,
-          headerLeft: () => <Greeting name={userhome} />,
           headerTitle: "",
+          headerLeft: () => <Greeting name={userhome} />,
+          headerRight: () => <SettingsButton />,
         }}
       />
       <ScrollView>
         <Search />
-        <View>{/*<RecommendedJobs />*/}</View>
+        <View>
+          {/*<RecommendedJobs />*/}
+          <RecommendedJobs />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

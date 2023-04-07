@@ -35,14 +35,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   paginationImage: {
-    width: "60%",
-    height: "60%",
+    width: "80%",
+    height: "80%",
     tintColor: COLORS.white,
   },
   paginationTextBox: {
     width: 30,
     height: 30,
-    borderRadius: 10,
+    borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: COLORS.lightWhite,

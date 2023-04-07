@@ -23,7 +23,7 @@ const RecommendedJobs = () => {
 
       <View style={styles.cardsContainer}>
         {loading ? (
-          <ActivityIndicator size="large" color={COLORS.primary} />
+          <ActivityIndicator size="large" color={COLORS.secondary} />
         ) : error ? (
           <Text>Something is wrong</Text>
         ) : (
@@ -31,9 +31,7 @@ const RecommendedJobs = () => {
             <JobsCard
               job={job}
               key={`job${job.job_id}`}
-              handlePress={() =>
-                router.push(`/job-details/${job.job_id}`)
-              }
+              handlePress={() => router.push(`/job-details/${job.job_id}`)}
               handleSave={() => ""}
             />
           ))
