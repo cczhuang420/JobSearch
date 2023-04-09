@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <br />
 <div align="center">
   <a href="https://github.com/UOA-CS732-SE750-Students-2023/cs732-se75-assignment-cczhuang420/blob/main/jobsearch/assets/icons/icon1.png?raw=true">
@@ -35,10 +37,64 @@ This section should list any major frameworks/libraries used to bootstrap your p
 This is an instruction for how you can run the app in the terminal
 
 ### Prerequisites
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+
+#### Rapid API
+<p>This app was developed using rapidapi:<a href="https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch"> JSearch</a> </p>
+
+* You will need to sign up and subscribe to using this API. They offer a basic plan which is free for "200 requests/month"
+* Normally it is enough for testing: however, please contact the offer if you encounter any problem.
+* Copy your X-RapidAPI-Key, and go to the file **./hook/useFetch.js** and **./app/screens/search.js**. place your API key there 
+
+#### How to run?
+You will need to have npm installed top be able to run this app. There are two options:
+  > cd jobsearch
+
+Install dependencies:
+  > npm install
+
+**Note:**
+Please allow the app to run for while when you test it. It will need to be properly loaded so everything will be good.
+
+
+* Android (Recommended): 
+  * Using your mobile phone: 
+    <p> 1, Download the <a href="https://expo.dev/client"> Expo Go app</a></p>
+    <p>2, Run the following command, it will ask to bundle with Expo Go or simulator to run the app </p>
+    
+    > npx expo start --tunnel
+
+    <p>3, Open Expo Go and Scan the QR code. Then wait for a while to allow the app being bundled</p>
+    
+  * Using Android simulator:
+    <p>Feel free to use simulator if you have any; however if you are using Android phone, it is recommended to download Expo Go</p>
+
+
+* IOS (Formatting may be different for different device):
+    * Using your mobile phone (Recommended):
+      <p> 1, Download the <a href="https://expo.dev/client"> Expo Go app</a> and sigin with your account</p>
+      <p> 2, You will need to login in the terminal too. Run the following command: </p>
+      
+      > expo login
+
+      <p>3, Run the following command, it will ask to bundle with Expo Go or simulator to run the app </p>
+
+      > npx expo start --tunnel
+
+      <p>4, Use the camera app to can the QR code and you will see "open in Expo Go". Then wait for a while to allow the app being bundled</p>
+
+    * <a href="https://docs.expo.dev/workflow/ios-simulator/"> Using Iphone simulator </a>(Xcode):
+      <p>1, Install Xcode, and run the following command if haven't configure yet</p>
+      
+      > sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+      <p>2, Open Xcode and run the command: </p>
+    
+      > npx expo start 
+      <p>3, hit "shit+i" to choose the simulator. I recommend using iphone12</p>
+    
+    
+**Note:**
+Running the mobile app using simulator may have some delay. Please allow the app to run for a while to be fully bundled.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -14,6 +14,7 @@ import axios from "axios";
 import JobsCard from "../../components/cards/JobsCard";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "../../styles/search";
+import {API_KEY} from "@env";
 
 const search = () => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const search = () => {
         page: page.toString(),
       },
       headers: {
-        "X-RapidAPI-Key": "eac84b28dbmsh036d9b0bdd675c1p1ddc67jsnf82c57d39faf",
+        "X-RapidAPI-Key": API_KEY,
         "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
       },
     };
