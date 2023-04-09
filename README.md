@@ -15,15 +15,18 @@
     <br />
     <br /> 
   </p>
-<a name="readme-top"></a>
+
 </div>
 
 ## About The Project   
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<p>
+This mobile app is designed to provide users a convenient and efficient platform for users to search jobs that integrates the JSearch API. Users can use the app to search for specific job information and retrieve relevant results. 
+The app is built using React Native with Expo, which provides a set of pre-configured tools and services to make it easier to develop, build, and deploy the app.
+</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section should list any major language/frameworks/libraries/platform used in this project.
 
 
 [![Android]][Android-url]
@@ -46,7 +49,15 @@ This is an instruction for how you can run the app in the terminal
 * Copy your X-RapidAPI-Key, and go to the .env file; then, place your API key there.
 
 #### How to run?
-You will need to have npm installed top be able to run this app. There are two options:
+You will need to have npm installed to be able to run this app. There are two options to test this app:
+
+<p> 1, Run with mobile phone</p>
+
+<p> 2, Run with simulator</p>
+
+<p> I will give both instructions for you to test in the later section <a href="options"> later section</a>. First in the terminal: </p>
+
+
 ```
 cd jobsearch
 ```  
@@ -60,7 +71,11 @@ npm install
 **Note:**
 Please allow the app to run for while when you test it. It will need to be properly loaded so everything will be good.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="options"></a>
+
+#### Android or IOS ?
 * Android (Recommended): 
   * Using your mobile phone: 
     <p> 1, Download the <a href="https://expo.dev/client"> Expo Go app</a></p>
