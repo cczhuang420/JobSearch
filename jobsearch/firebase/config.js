@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { useState, useEffect } from "react";
+import * as firbase from "firebase";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -13,11 +13,25 @@ const firebaseConfig = {
   storageBucket: "jobsearch-3cad8.appspot.com",
   messagingSenderId: "221383714548",
   appId: "1:221383714548:web:a0a73dcec95ef910ec60a1",
-  measurementId: "G-H8VQ1PJZBH"
+  measurementId: "G-H8VQ1PJZBH",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
 
-export default app;
+export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword("example@goole.gom", "123456789")
+      .then((user) => {
+        console.log(user);
+        setIsAuthenticated(ture);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+}

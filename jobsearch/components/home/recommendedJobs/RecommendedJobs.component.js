@@ -16,7 +16,13 @@ const RecommendedJobs = () => {
     <View style={styles.container}>
       <View style={styles.jobsHeader}>
         <Text style={styles.jobsHeaderTitle}>Recommended for you</Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            alert(
+              "To save the API request, see all functionality is under development"
+            )
+          }
+        >
           <Text style={styles.seeAllButton}>See All</Text>
         </TouchableOpacity>
       </View>
@@ -32,7 +38,6 @@ const RecommendedJobs = () => {
               job={job}
               key={`job${job.job_id}`}
               handlePress={() => router.push(`/job-details/${job.job_id}`)}
-              handleSave={() => ""}
             />
           ))
         )}

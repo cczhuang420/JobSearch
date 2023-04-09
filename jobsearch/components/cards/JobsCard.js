@@ -1,12 +1,28 @@
 import styles from "./jobsCard.styles";
 import { View, Text, TouchableOpacity, Image } from "react-native";
-import { Feather } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import { COLORS, icons } from "../../constants";
+import { COLORS } from "../../constants";
 import checkImgUrl from "../../utils";
-icons;
+import { useState } from "react";
+import { FontAwesome } from "@expo/vector-icons";
 
-const JobsCard = ({ job, handlePress, handleSave }) => {
+const JobsCard = ({ job, handlePress }) => {
+  const [isActive, setIsActive] = useState(false);
+  const [heartName, setHeartName] = useState("heart-o");
+  const [heartColor, setHeartColor] = useState(COLORS.lightGray);
+
+  const handleSave = () => {
+    if (!isActive) {
+      setHeartName("heart");
+      setHeartColor(COLORS.secondary);
+      setIsActive(true);
+    } else {
+      setHeartName("heart-o");
+      setHeartColor(COLORS.lightGray);
+      setIsActive(false);
+    }
+  };
+
   return (
     <TouchableOpacity style={styles.jobsCard} onPress={handlePress}>
       <View style={styles.container}>
@@ -41,9 +57,18 @@ const JobsCard = ({ job, handlePress, handleSave }) => {
           )}
         </View>
       </View>
+
       <View style={styles.rightGroup}>
-        <TouchableOpacity onPress={handleSave}>
-          <Feather name="heart" size={24} color={COLORS.lightGray} />
+        <TouchableOpacity
+          style={{
+            width: 40,
+            height: 40,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onPress={handleSave}
+        >
+          <FontAwesome name={heartName} size={24} color={heartColor} />
         </TouchableOpacity>
 
         <View style={styles.location}>

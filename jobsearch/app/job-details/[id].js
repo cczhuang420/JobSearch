@@ -22,6 +22,22 @@ const JobDetails = () => {
   const router = useRouter();
   const { id } = useSearchParams();
 
+  const [isActive, setIsActive] = useState(false);
+  const [heartName, setHeartName] = useState("heart-o");
+  const [heartColor, setHeartColor] = useState(COLORS.black);
+
+  const handleSave = () => {
+    if (!isActive) {
+      setHeartName("heart");
+      setHeartColor(COLORS.secondary);
+      setIsActive(true);
+    } else {
+      setHeartName("heart-o");
+      setHeartColor(COLORS.lightGray);
+      setIsActive(false);
+    }
+  };
+
   const [refreshing, setRefreshing] = useState(false);
 
   const { data, loading, error, refetch } = useFetch("job-details", {
@@ -52,8 +68,17 @@ const JobDetails = () => {
           ),
 
           headerRight: () => (
-            <TouchableOpacity style={{ marginRight: SIZES.small }}>
-              <FontAwesome name="heart-o" size={24} color="black" />
+            <TouchableOpacity
+              style={{
+                marginRight: SIZES.small,
+                width: 40,
+                height: 40,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              onPress={handleSave}
+            >
+              <FontAwesome name={heartName} size={24} color={heartColor} />
             </TouchableOpacity>
           ),
         }}
