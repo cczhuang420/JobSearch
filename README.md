@@ -41,16 +41,21 @@ This is an instruction for how you can run the app in the terminal
 #### Rapid API
 <p>This app was developed using rapidapi:<a href="https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch"> JSearch</a> </p>
 
-* You will need to sign up and subscribe to using this API. They offer a basic plan which is free for "200 requests/month"
-* Normally it is enough for testing: however, please contact the offer if you encounter any problem.
-* Copy your X-RapidAPI-Key, and go to the file **./hook/useFetch.js** and **./app/screens/search.js**. place your API key there 
+* You will need to sign up and subscribe to use this API. They offer a basic plan which is free for "200 requests/month"
+* Normally it is enough for testing: however, please contact the author if you encounter any problem.
+* Copy your X-RapidAPI-Key, and go to the .env file; then, place your API key there.
 
 #### How to run?
 You will need to have npm installed top be able to run this app. There are two options:
-  > cd jobsearch
+```
+cd jobsearch
+```  
+
 
 Install dependencies:
-  > npm install
+```
+npm install
+```
 
 **Note:**
 Please allow the app to run for while when you test it. It will need to be properly loaded so everything will be good.
@@ -61,7 +66,9 @@ Please allow the app to run for while when you test it. It will need to be prope
     <p> 1, Download the <a href="https://expo.dev/client"> Expo Go app</a></p>
     <p>2, Run the following command, it will ask to bundle with Expo Go or simulator to run the app </p>
     
-    > npx expo start --tunnel
+    ```
+    npx expo start --tunnel
+    ```
 
     <p>3, Open Expo Go and Scan the QR code. Then wait for a while to allow the app being bundled</p>
     
@@ -74,22 +81,30 @@ Please allow the app to run for while when you test it. It will need to be prope
       <p> 1, Download the <a href="https://expo.dev/client"> Expo Go app</a> and sigin with your account</p>
       <p> 2, You will need to login in the terminal too. Run the following command: </p>
       
-      > expo login
+      ```
+      expo login
+      ```
 
       <p>3, Run the following command, it will ask to bundle with Expo Go or simulator to run the app </p>
 
-      > npx expo start --tunnel
+      ```
+      npx expo start --tunnel
+      ```
 
       <p>4, Use the camera app to can the QR code and you will see "open in Expo Go". Then wait for a while to allow the app being bundled</p>
 
     * <a href="https://docs.expo.dev/workflow/ios-simulator/"> Using Iphone simulator </a>(Xcode):
       <p>1, Install Xcode, and run the following command if haven't configure yet</p>
       
-      > sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+      ```
+      sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+      ```
 
       <p>2, Open Xcode and run the command: </p>
     
-      > npx expo start 
+      ```
+      npx expo start 
+      ```
       <p>3, hit "shit+i" to choose the simulator. I recommend using iphone12</p>
     
     
