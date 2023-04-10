@@ -1,6 +1,5 @@
-
 import { View, Text, FlatList } from "react-native";
-import styles from "./greeting.styles";
+import styles from "./Greeting.styles";
 
 const Greeting = ({ name }) => {
   return (

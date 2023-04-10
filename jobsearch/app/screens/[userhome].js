@@ -3,7 +3,7 @@ import { Stack, useRouter, useSearchParams } from "expo-router";
 import { COLORS } from "../../constants";
 import Search from "../../components/home/search/Search.component";
 import RecommendedJobs from "../../components/home/recommendedJobs/RecommendedJobs.component";
-import Greeting from "../../components/home/greeting/Greeting.component";
+import Greeting from "../../components/home/Greeting/Greeting.component";
 import SettingsButton from "../../components/home/settings/button/SettingsButton.component";
 
 const Home = () => {
@@ -24,8 +24,7 @@ const Home = () => {
       <ScrollView>
         <Search />
         <View>
-          {/*<RecommendedJobs />*/}
-
+          <RecommendedJobs />
         </View>
       </ScrollView>
     </SafeAreaView>
