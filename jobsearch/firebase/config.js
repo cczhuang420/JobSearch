@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { useState, useEffect } from "react";
-import * as firbase from "firebase";
+import * as firebase from "firebase";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,10 +26,10 @@ export default function App() {
   useEffect(() => {
     firebase
       .auth()
-      .signInWithEmailAndPassword("example@goole.gom", "123456789")
+      .signInWithEmailAndPassword("example@google.gom", "123456789")
       .then((user) => {
         console.log(user);
-        setIsAuthenticated(ture);
+        setIsAuthenticated(true);
       })
       .catch((error) => {
         console.log(error);

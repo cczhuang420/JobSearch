@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS, SIZES, FONT } from "../constants";
+import { COLORS, SIZES, FONT } from "../../constants";
 
 const styles = StyleSheet.create({
   titleContainer: { marginBottom: SIZES.xLarge },
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    marginTop: SIZES.xxLarge * 4,
+    marginTop: SIZES.xxLarge * 5,
     marginLeft: SIZES.xLarge,
     marginRight: SIZES.xLarge,
   },
@@ -36,8 +36,10 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    flex: 1,
     width: 300,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: SIZES.small,
     marginLeft: SIZES.xxLarge,
     marginRight: SIZES.xxLarge,
@@ -45,6 +47,7 @@ const styles = StyleSheet.create({
 
   loginButton: {
     height: 50,
+    width: "100%",
     alignItems: "center",
     justifyContent: "center",
     fontFamily: FONT.regular,

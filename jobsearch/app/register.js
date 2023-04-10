@@ -1,21 +1,17 @@
 import { SafeAreaView } from "react-native";
 import React, { useState } from "react";
 import { Stack, useRouter } from "expo-router";
-import LoginComponent from "../components/login/Login.component";
+import RegisterComponent from "../components/register/Register.component";
 import { COLORS } from "../constants";
 
 // TODO - add login
-const Login = () => {
+const Register = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
   const handleLogin = () => {
     router.push(`/screens/${name}`);
-  };
-
-  const onRegister = () => {
-    router.push("/register");
   };
 
   // const handleLogin = () => {
@@ -31,16 +27,15 @@ const Login = () => {
           headerTitle: "",
         }}
       />
-      <LoginComponent
+      <RegisterComponent
         userName={name}
         setName={setName}
         email={email}
         setEmail={setEmail}
         handleLogin={handleLogin}
-        onRegister={onRegister}
       />
     </SafeAreaView>
   );
 };
 
-export default Login;
+export default Register;

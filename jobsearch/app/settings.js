@@ -12,7 +12,7 @@ const Settings = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
       <Stack.Screen
         options={{
-          headerStyle: { marginRignt: 50, backgroundColor: COLORS.primary },
+          headerStyle: { marginRight: 50, backgroundColor: COLORS.primary },
           headerShown: true,
           headerTitle: "",
           headerShadowVisible: false,

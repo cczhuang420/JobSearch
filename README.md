@@ -55,7 +55,7 @@ You will need to have npm installed to be able to run this app. There are two op
 
 <p> 2, Run with simulator</p>
 
-<p> I will give both instructions for you to test in the later section <a href="options"> later section</a>. First in the terminal: </p>
+<p> I will give both instructions for you to test in the<a href="#options"> later section</a>. First in the terminal: </p>
 
 
 ```
@@ -87,8 +87,15 @@ Please allow the app to run for while when you test it. It will need to be prope
 
     <p>3, Open Expo Go and Scan the QR code. Then wait for a while to allow the app being bundled</p>
     
-  * Using Android simulator:
-    <p>Feel free to use simulator if you have any; however if you are using Android phone, it is recommended to download Expo Go</p>
+  * <p>Using Android simulator -> also check this <a href="https://docs.expo.dev/workflow/android-studio-emulator/"> link</a> if you don't know how to setup:</p>
+    <p>1, Feel free to use simulator if you have any; however if you are using Android phone, it is recommended to download Expo Go</p>
+    <p>2, Open yor simulator and run the command: </p>
+    
+    ```
+    npx expo start 
+    ```
+    
+    <p>3, press a and choose a Android simulator to run this app.</p>
 
 
 * IOS (Formatting may be different for different device):
