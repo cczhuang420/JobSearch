@@ -1,26 +1,26 @@
-import { SafeAreaView } from "react-native";
-import React, { useState } from "react";
+import {
+  SafeAreaView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import React, { useContext, useState } from "react";
 import { Stack, useRouter } from "expo-router";
-import LoginComponent from "../components/login/Login.component";
-import { COLORS } from "../constants";
+import { COLORS, SIZES } from "../constants";
+import styles from "../styles/login.styles";
 
 // TODO - add login
 const Login = () => {
   const router = useRouter();
-  const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
+    setName("");
+    setPassword("");
     router.push(`/screens/${name}`);
   };
-
-  const onRegister = () => {
-    router.push("/register");
-  };
-
-  // const handleLogin = () => {
-  //   router.push("/jobInfo/jobInfo");
-  // };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
@@ -31,14 +31,56 @@ const Login = () => {
           headerTitle: "",
         }}
       />
-      <LoginComponent
-        userName={name}
-        setName={setName}
-        email={email}
-        setEmail={setEmail}
-        handleLogin={handleLogin}
-        onRegister={onRegister}
-      />
+      <View style={styles.TextInputContainer}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Find A New Job</Text>
+        </View>
+
+        <View style={styles.TextInputWrapper}>
+          <TextInput
+            style={styles.TextInput}
+            value={name}
+            onChangeText={(n) => {
+              setName(n);
+            }}
+            placeholder="Username"
+          ></TextInput>
+        </View>
+
+        <View style={styles.TextInputWrapper}>
+          <TextInput
+            style={styles.TextInput}
+            value={password}
+            secureTextEntry={true}
+            onChangeText={(p) => {
+              setPassword(p);
+            }}
+            placeholder="Password"
+          ></TextInput>
+        </View>
+
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => handleLogin()}
+          >
+            <Text style={styles.loginButtonText}>Login In</Text>
+          </TouchableOpacity>
+
+          <View
+            style={{
+              color: COLORS.tertiary,
+              flexDirection: "row",
+              marginTop: SIZES.medium,
+            }}
+          >
+            <Text>Don't have an account?</Text>
+            <TouchableOpacity onPress={() => router.push("/register")}>
+              <Text style={{ color: COLORS.secondary }}> Register here</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };

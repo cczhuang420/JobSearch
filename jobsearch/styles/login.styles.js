@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS, SIZES, FONT } from "../../constants";
+import { COLORS, SIZES, FONT } from "../constants";
 
 const styles = StyleSheet.create({
   titleContainer: { marginBottom: SIZES.xLarge },
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     marginRight: SIZES.xxLarge,
   },
 
-  registerButton: {
+  loginButton: {
     height: 50,
     width: "100%",
     alignItems: "center",
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
   },
 
-  registerButtonText: {
+  loginButtonText: {
     color: COLORS.primary,
     fontFamily: FONT.regular,
     fontSize: SIZES.medium,
