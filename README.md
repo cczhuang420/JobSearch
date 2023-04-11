@@ -37,7 +37,15 @@ This section should list any major language/frameworks/libraries/platform used i
 
 ## Getting Started
 
-This is an instruction for how you can run the app in the terminal
+This is an instruction for how you can run the app in the terminal. First:
+
+```
+git clone {my-repo}
+```
+
+```
+cd jobsearch
+```  
 
 ### Prerequisites
 
@@ -47,6 +55,10 @@ This is an instruction for how you can run the app in the terminal
 * You will need to sign up and subscribe to use this API. They offer a basic plan which is free for "200 requests/month"
 * Normally it is enough for testing: however, please contact the author if you encounter any problem.
 * Copy your X-RapidAPI-Key, and go to the .env file; then, place your API key there.
+
+Example (random key, and remember that you need to copy your API key and paste as following in .env file): 
+
+> API_KEY=eassdjdsfjfvdjksnsdkj11293884379hdsfjfkjfk
 
 #### How to run?
 You will need to have npm installed to be able to run this app. There are two options to test this app:
@@ -58,9 +70,7 @@ You will need to have npm installed to be able to run this app. There are two op
 <p> I will give both instructions for you to test in the<a href="#options"> later section</a>. First in the terminal: </p>
 
 
-```
-cd jobsearch
-```  
+
 
 
 Install dependencies:
